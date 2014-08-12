@@ -1,0 +1,115 @@
+
+
+In this document you will find all the skills resumed on single points that you must know to be a NOC SuperRockStar.
+A good start is make sure that you know all of these single points.
+Send quick alert
+
+    Understand all fields on the form (http://nocreport001.ix5.noc.prod.solan.ecg.so/nocfw/quickalert/home)
+    Understand the difference between quick alert, update, informational message and resolved
+    Understand the meaning of Metric Impact and Community Impact
+
+Classify incident
+
+For classify an incident you must refer to the most recent version of CEN. Should be in physicall format on the NOC folder around the table.
+Set up a bridge
+
+Go to: Creating a eCG NOC incident bridge
+Monitoring tools
+Nagios
+
+    Disable / Enable notifications
+        Single service
+        Single host
+        Host group
+        All hosts / Services
+    Schedule downtime
+        Single service
+        Single host
+    Find check location
+
+Centreon
+
+    Add / Edit hosts
+    Add / Edit Services
+    Add / Edit Commands
+    Add / Edit check thresholds
+    Push Nagios configuration
+
+Zabbix
+
+    Manage Screens / Graphs
+    Add Maintenance period
+    Add / manage hosts
+    Add / Manage Items
+    Add / Manage Triggers
+    Add / Manage Actions
+    Add / Manage templates
+    User management
+        Add user
+        Add media for the user
+
+Cacti
+
+    Create / Manage Graphs
+    Create / Manage Devices
+    Mange users
+        Add user
+        Delete user
+        Manage user permissions
+
+Munin
+
+    Add Hosts
+    Add Graphs
+
+Graphite
+
+    Lookup and make Graphs
+
+Gomez
+
+    Add / Edit Gomez check
+    View Event logs
+
+Alert investigation
+
+One of our crucial mission is try to give a first approach of what is happening. We must provide the maximum information as possible to the platform owner or the responsible of this system.
+Investigate system alerts
+
+    Investigate Load / Memory / Swap alerts
+        Check process running on the system and identify which is taken more CPU / Memory resources (top, 1 c / free -m)
+        Ensure that it is an expected behavior, check mail / nagios (release done, test running, etc..)
+        Check the trend on cacti graph
+        Define the severity based on the documentation (wiki or other knowledge base)
+        Take a defined action
+        Notify responsible
+    Investigate Disk alerts
+        Check partition with space problems (df -h)
+        Check the file / folder with problem (du -chs *)
+
+    #* Define the severity based on the documentation (wiki or other knowledge base)
+        Take a defined action if needed
+        Notify responsible
+
+Investigate custom service check alerts
+
+    Find the check on the nagios server
+    Try to run the check manually
+    Locate documentation regarding this check
+    Define severity
+    Take a defined action if needed
+    Notify responsible
+
+Investigate gomez alert
+
+    Check the site manually in your browser
+    Extract the problematic locations
+    Check health INTERNET status
+    Define severity
+    Take a defined action if needed
+    Notify responsible
+
+Handover mail
+
+Check: Handover mail template
+

@@ -1,0 +1,36 @@
+﻿LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 15. 
+
+You may note that several of the labs are similar to those in the Study Guide. Rest assured that although you may take the same basic actions in some of these labs, the parameters that you use will vary. And practice makes perfect.
+
+
+Lab 1
+
+Install Samba on a system where it hasn't been installed before. If you've installed Samba on the gamma.example.net system while reading the chapter, the whitehat and blackhat.example.net systems are available for this lab.
+
+Configure Samba to share the /home/testuser home directory from the gamma.example.net system. Test the result from another VM on the network. Give that user a Samba password of rhcecert. Make sure the system works after a reboot. Save the changes for Lab 3. 
+
+
+Lab 2
+
+There are times when you'll need the documentation to look something up. The Samba documentation includes sample stanzas that may be useful in your work, or potentially even on an exam. It's available from the samba-doc package. Install it on the gamma.example.net system. Navigate to the documentation associated with the Samba3 By Example book. Access some examples in a browser. Save the result for Lab 5.
+
+
+Lab 3
+
+Based on the configuration created for a Samba server, based on the conditions depicted in Lab 1, limit access to a single system. If the Samba server is gamma.example.net, limit access to the whitehat.example.net system. Do not allow access from the gamma.example.net or blackhat.example.net system. Use the Samba configuration file for this purpose. Make sure access is available for the user named testuser, but don't explicitly limit browser access to that user.
+
+
+Lab 4
+
+Create a Samba share of the /tmp directory on gamma.example.net, named tmp and available to all users, but limited to systems on the example.net network.
+
+
+Lab 5
+
+Create a new directory named /ceo on the gamma.example.net system. Copy the PDF files from the samba-doc package installed in Lab 2. Make that share accessible and limited to a new user named ceo from the whitehat.example.net system. You can then assign user ceo appropriate ownership of the directory and the files therein. Give the ceo user a Samba password of bigfish.
+
+
+Lab 6
+Create a new directory named /certnotes on the gamma.example.net system. Include a copy of the files from the /home/testuser/Desktop/ChapterLabs directory. Set up Samba to share that directory, and limit access to users redhat1 and redhat2. Make those users members of a special group named cert.

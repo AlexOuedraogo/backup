@@ -1,0 +1,6 @@
+To  enable yum in the Redhat Exam test servers
+
+
+Well, one way would be to edit the .repo file for the bleed repo... and set "enabled=0".
+
+You could also just delete the .repo file, or rename it so that it doesn't end with .repo... for example, you could rename it so that the filename ends with .old or .disabled.

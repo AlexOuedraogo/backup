@@ -1,0 +1,56 @@
+Automating strategiies
+
+1. Pick the right thing to automate
+ex.
+- syslog
+- host keys
+- Accounts
+- configs
+
+2. Don't earn 2 thing at once
+- Automate what you know
+- Don't automate your automation framework as your first project
+- 3 pass automation (figure it out, refine the setup, declare state)
+
+3. Puppet Tooling to you better
+- Inventory service (facter, custom facts, facts.d, ...)
+- Live Management (PE)
+- RAL (puppet resource)
+- puppet describe 
+- noop
+- geppetto
+- vim
+- Resources (forge, ask, )
+- IRC
+4. Start Simple/Stay Simple
+- build small, single-purpose, module
+- Time Measurements
+- WHAT TO KNOW FROM NEW SYSTEM THAT COME ONLINE:
+  * Pupblic IP in hosts
+  * Puppetmaster in Hosts
+  * My user account
+  * My ssh key
+  * Install vim-enhenced
+  * setup backup
+  * Add me to sudoers
+  * Setup locate
+  * Bind utils
+  * Define test approver
+  * define Business approver
+  * Classify as Prod/Dev
+  * Install wget
+  * Configure monitoring
+  * Add EPEL
+  * Configure Vim
+  * Configure SELinux
+  * Install man, strace
+- Deliver units of values
+
+5. Iteration
+- VCS
+- Have a Lab
+- Improve your work flow
+- Refactor
+Exec-->Defined(type)-->Fully(modeled)
+
+

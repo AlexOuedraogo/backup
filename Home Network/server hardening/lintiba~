@@ -1,0 +1,14 @@
+Server hardening
+
+* Host Information
+
+- Servername: lintiba
+- Ip Address: 192.168.2.2
+- Domain: ouedraogo.nl
+
+
+* Hardening 
+1. Configure the BIOS (X)
+2. Install legal Banner (V)
+3. Configure OpenSSH (V)
+4. :

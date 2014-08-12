@@ -1,0 +1,41 @@
+﻿LABS
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 9.
+
+ 
+Lab 1
+
+This is one lab where you should use the physical KVM host system as a VNC client. But first, you want to configure a VNC server package on the gamma.example.net system. If you've done so from a KVM GUI window, close that window when configuration is complete. You can then set up a VNC client on the host system. If successful, you'll know right away, as you'll have a VNC client with a display of the gamma.example.net GUI.
+
+Because the standard Virtual Machine Manager (VMM) client also uses VNC, that suggests all you need to do is open a VMM window. But that is not an acceptable solution, as it doesn't use the VNC server options discussed in the chapter.
+
+
+Lab 2
+
+Create a /var/backup directory. Set up a compressed backup of all files in the /home directory. Make sure to save ACL and SELinux settings for each file. Call that backup file homebackup. Use an appropriate file extension. Save that backup in the /var/backup directory.
+
+
+Lab 3
+
+Set up a monthly script that saves a list of all current processes in the file named ps1 in the root user's home directory.
+
+
+Lab 4
+
+Set up a cron script that sends the following message to every command-line console at 9:00 am, 11:00 am, 1:00 pm, and 3:00 pm every weekday:
+
+"Time for a break."
+
+Hint: the wall command can be used to send messages to every command-line console. You may want to include another message, such as "Press Enter to continue." (To some extent, the message isn't important. However, it is important to make sure the message is delivered at the specified times.)
+
+
+Lab 5
+
+This lab includes three tasks associated with log files in the /var/log directory. In these tasks, you'll save lines to files in the /root directory.
+
+1. Navigate to /var/log as the root user.
+ 
+2. Identify the hardware address associated with the network card used during the installation process. Save the line with the hardware address in the ifcfg_eth0 file in the /root directory. Saving multiple lines is acceptable.
+
+3. Find the UUID of the top-level root directory in the dmesg log. Save the line with that information in the /root/rootUUID file.
+
+4. Identify errors from the X Server log file, and save them to the Xerror file in the /root directory.

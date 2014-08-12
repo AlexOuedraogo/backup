@@ -1,0 +1,99 @@
+http://www.cyberciti.biz/faq/lftp-mirror-example/
+
+Example: How to mirror files from a remote ftp server (get files)
+
+First, you need to connect to the remote ftp server using the following syntax:
+lftp ftp.cyberciti.biz
+Type username and password:
+
+lftp ftp.cyberciti.biz:~> user vivek@cyberciti.biz
+
+Sample outputs:
+
+Password:
+lftp vivek@cyberciti.biz@rawlogs.bitgravity.com:~>
+
+Type ls command to see a list of files:
+
+lftp ftp.cyberciti.biz:~> ls
+
+Sample outputs:
+
+-rw-r--r--    1 80       www      36809419 Jun 24 23:59 2012-06-24.log.gz
+-rw-r--r--    1 80       www      100912271 Jun 25 23:59 2012-06-25.log.gz
+-rw-r--r--    1 80       www      102926055 Jun 26 23:59 2012-06-26.log.gz
+
+To mirror all of the above files in the current directory, enter:
+
+lftp ftp.cyberciti.biz:~> mirror
+
+With mirror lftp command you can specify source directory to local target directory. If target directory ends with a slash, the source base name is appended to target directory name. Source and/or target can be URLs pointing to directories. The syntax is:
+
+lftp ftp.cyberciti.biz:~> mirror source target
+
+OR
+
+lftp ftp.cyberciti.biz:~> mirror logs/ /data/wwwlogs
+
+I highly recommend that you start mirror job with resume option. This make sure if ftp mirror was failed due to network connection it will only download partial file
+
+lftp ftp.cyberciti.biz:~> mirror -c source target
+
+OR
+
+lftp ftp.cyberciti.biz:~> mirror --continue
+
+To download only newer files (-c won't work):
+
+lftp ftp.cyberciti.biz:~> mirror --only-newer
+
+OR
+
+lftp ftp.cyberciti.biz:~> mirror -n
+
+You can speed up ftp mirror operation by downloading files in parallel using the following syntax:
+
+lftp ftp.cyberciti.biz:~> mirror -p
+
+To download 10 files in parallel, enter:
+
+lftp ftp.cyberciti.biz:~> mirror --parallel=10
+
+You can use pget to transfer every single file:
+
+lftp ftp.cyberciti.biz:~> mirror -c  --use-pget-n=10
+
+Example: How to reverse mirror files to a remote ftp server (put files)
+
+You need to pass -R or --reverse option to do reverse mirror i.e. put all files from a local disk to a remote ftp server including sub-dirs and all files in it. In this example reverse mirror /home/project/website/version5/ to a remote ftp server called ftp.cyberciti.biz:
+First, you need to connect to the remote ftp server using the following syntax:
+lftp ftp.cyberciti.biz
+Type username and password:
+
+lftp ftp.cyberciti.biz:~> user vivek@cyberciti.biz
+
+Sample outputs:
+
+Password:
+lftp vivek@cyberciti.biz@rawlogs.bitgravity.com:~>
+
+Change local directory to /home/project/website/version5/:
+
+lftp ftp.cyberciti.biz:~> lcd /home/project/website/version5/
+
+Sample outputs:
+
+lcd ok, local cwd=/home/project/website/version5
+
+To upload, enter:
+
+lftp ftp.cyberciti.biz:~> mirror -R
+
+OR set local directory and remote upload directory as follows:
+
+lftp ftp.cyberciti.biz:~> mirror -R /home/vivek/projects/website/version10 /var/www/html
+
+When using -R, the first directory is local and the second is remote. If the second directory is omitted, base name of first directory is used. If both directories are omitted, current local and remote directories are used. If target directory ends with a slash (except root directory) then base name of source directory is appended. To quit from ftp session type:
+
+lftp ftp.cyberciti.biz:~> quit
+

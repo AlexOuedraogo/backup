@@ -1,0 +1,38 @@
+﻿LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 6. 
+
+You'll want to run these labs in sequence.
+
+
+Lab 1
+
+This lab assumes you have a new hard disk (or at least empty space on a current hard drive where you can add a new partition). As described at the beginning of the chapter, a 1GB preconfigured file is already available; you can alternatively create your own virtual KVM hard disk. Just make sure it's at least 1GB in size.
+
+Once complete, you set up additional swap space from the new disk of approximately 400MB.
+
+
+Lab 2
+
+With the space remaining on the new hard disk used in Lab 1, create two partitions for a Logical Volume called lv1 of 200MB. Call the Volume Group, vg1. Format it to the ext4 file system, and mount it on a new directory, /dir1. Make sure the change survives a reboot.
+
+
+Lab 3
+
+Enlarge the space in the formatted lv1 Logical Volume to 500MB. Make sure the formatted file system fills the available space.
+
+
+Lab 4
+
+Remove the swap space created in Lab 1. Allocate that space as a regular partition, formatted to the ext3 file system. Set it up on a new directory, /dir2.
+
+
+Lab 5
+
+Use the LV and partition created in Labs 2 and 4. Create a label for the LV. Name it logvol. Use the UUID associated with the partition.
+
+
+Lab 6
+
+Encrypt the LV created in Lab 2 (and expanded in Lab 3). Don't worry about saving any data in that LV. Configure it with the passphrase: I love Linux! Make sure it mounts on 
+/dir1 the next time you boot

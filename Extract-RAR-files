@@ -1,0 +1,15 @@
+Online extraction
+http://b1.org/online#
+
+----
+
+Local extraction
+
+unrar e -kb CompressedRAR.rar
+
+e - Extract to the current directory
+-kb - Keep broken extracted files
+
+For more information on the unrar function please see the man pages by executing the following command - man unrar
+
+

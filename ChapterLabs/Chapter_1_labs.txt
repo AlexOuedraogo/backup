@@ -1,0 +1,19 @@
+﻿LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 1.
+
+The first three labs in Chapter 1 are available in the Practice Exams book. This file contains Labs 4 and 5 for that same chapter. You can find relevant answers and discussion for all labs in the book.
+
+
+Lab 4
+
+In this lab, you install and set up a default configuration FTP server on the gamma.example.net system. Take the anaconda-ks.cfg file from the /root directory, and copy it to a newly created /var/ftp/pub/ks directory. Rename that file gammaftp-ks.cfg. Unless you've changed the MAC address, the virtual network adapter should be getting its IP address dynamically. Record that IP address.
+
+If successful, you'll be able to access the system anonymously. Log into the whitehat.example.net system, and download the gammaftp-ks.cfg file with an FTP client such as lftp.
+
+
+Lab 5
+
+In this lab, you install and set up a default configuration HTTP server on the gamma.example.net system. You take the install.log file from the /root directory, and copy it to a newly created /var/www/html/rpmlist directory. Rename that file gamma-install.log. To repeat the warning from Lab 4, unless you've changed the MAC address, the virtual network adapter should be getting its IP address dynamically. Record that IP address.
+
+If successful, you'll be able to access the file from remote systems. Log into the whitehat.example.net system, and download the gamma-install.log file with a web browser; use the IP address of gamma.example.net here: http://ip_address/rpmlist. 

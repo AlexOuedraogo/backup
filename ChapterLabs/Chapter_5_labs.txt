@@ -1,0 +1,39 @@
+﻿LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 5. The labs in this chapter are to be run on the gamma.example.net system, unless otherwise noted. Labs 2, 3, and 4 should be run in sequence.
+
+
+Lab 1
+
+This lab includes three parts that support an understanding of booting, rebooting, and shutting down a system. 
+
+1. Power up a system. Access the GRUB menu. Disable the splash screen that normally appears during the boot process. Make sure the hardware detection boot messages appear as well.
+
+2. Run the shutdown -r 1 command. Wait one minute. When the messages appear, observe the network services that are being stopped.
+
+3. When the system restarts, run the shutdown command. Does it work? Try the halt command.
+
+
+Lab 2
+
+In this lab, you'll boot a system into runlevel 4. Even though it's listed in /etc/inittab as unused, you might be surprised at the result. Run the startx command.
+
+
+Lab 3
+
+Change the services that start in runlevel 4 to match those in runlevel 5. Hint: there are five services that have different start modes in the two runlevels: abrt-ccpp, abrtd, abrt-oops, spice-vdagentd, and firstboot. Move to runlevel 4. 
+
+
+Lab 4
+
+Change the default runlevel of /etc/inittab to 4. Change whatever else is necessary to start the GUI in runlevel 4. Reboot the system. When you're done, restore the original version of any configuration files that you've changed (including, but not limited to, /etc/inittab).
+
+
+Lab 5
+
+You're a temporary administrator, and you don't have the root administrative password. Assuming GRUB is not password protected, get into the gamma.example.net system without the root password. Change the root password to randall. (Yes, that is the existing password.)
+
+
+Lab 6
+
+Set up a separate boot stanza that does not use UUIDs. Make sure to change the title associated with the new stanza. Reboot the system, and make sure that you're rebooting from the new stanza.

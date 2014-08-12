@@ -1,0 +1,1 @@
+type=AVC msg=audit(1329095534.616:45515): avc:  denied  { search } for  pid=27877 comm="vsftpd" name="os" dev=sda7 ino=1310008 scontext=system_u:system_r:ftpd_t:s0-s0:c0.c1023 tcontext=system_u:object_r:iso9660_t:s0 tclass=dir

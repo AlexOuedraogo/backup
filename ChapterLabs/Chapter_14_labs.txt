@@ -1,0 +1,48 @@
+﻿LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 14. 
+
+You may note that several of the labs are similar to those in the Study Guide. Rest assured that although you may take the same basic actions in some of these labs, the parameters that you use will vary. And practice makes perfect.
+
+
+Lab 1
+
+In this lab, you set up the main Apache documentation page as the default home page for the local system. If you've installed the httpd-manual RPM, that index.html file will be available in the /var/www/manual directory. Missing icons are acceptable for the purpose of this lab. The links from this page do not need to work. Verify the page by navigating to the http://gamma.example.net URL.
+
+Now navigate to http://gamma.example.net/manual, and click the CGI: Dynamic Content link. Review the page therein for more information on CGI scripting. Review more links from the http://gamma.example.net/manual page if desired. The Apache documentation is excellent, and you may learn things not found in the Study Guide.
+
+
+Lab 2
+
+Allow access to the Apache server from all systems on the 192.168.122.0 network, except from 192.168.122.240 (blackhat.example.net). Make sure access is available on both ports 80 and 443. Set up HTTP access on port 8080.
+
+
+Lab 3
+
+Now configure two HTTP web sites on the local server. Set them up on URLs alpha.example.net and beta.example.net. Make sure they're accessible from all systems on the 192.168.122.0 network. Modify the /etc/hosts files as needed on all three virtual machines.
+
+Set up an appropriate index.html file with the URL of the web site contained therein. As text works fine in .html files, you could add something like the following text to the index.html file for the alpha.example.net system:
+
+This is the HTTP server for alpha.example.net.
+
+Repeat the process for the beta.example.net system.
+
+
+Lab 4
+
+Set up a self-signed certificate for the alpha.example.net system. Configure a separate HTTPS web site for that system, using those certificates. This lab requires the configuration of that system within a virtual host container.
+
+
+Lab 5
+
+Configure access to the testuser home directory in the public_html subdirectory, and limit access to that user. Require a login; don't use the rhcert password assigned for standard logins. Set rhcecert as the password.
+
+
+Lab 6
+
+Configure a home directory for a group of users, with access through the browser limited to the members of that group. For the purpose of this lab, the group is named candidates, with users named eileen, jefferson, and charles.
+
+
+Lab 7
+
+Configure the HTTP alpha.example.net web site to handle CGI scripts in the cgi-bin/ subdirectory of its DocumentRoot. Create your own Perl script, using the information available in the Apache documentation. 

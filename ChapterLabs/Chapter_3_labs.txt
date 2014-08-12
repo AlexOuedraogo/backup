@@ -1,0 +1,15 @@
+LABS
+
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 3.
+
+The first lab is based on the Red Hat warning about documentation, how "Red Hat may use applications during the exam that are not included in Red Hat Enterprise Linux for the purpose of evaluating candidate's abilities to meet this objective."
+
+The labs that follow are troubleshooting in nature. They are based on the initial configuration of the VMs that you loaded from the DVD in Chapter 1. They assume that you haven't changed the MAC address of the associated network card, as documented in Chapter 1, Table 1-2.
+
+But once you've completed Labs 2, 3, and 4, the three VMs on your network loaded from the DVD should reflect the hardware and static IP addresses noted in Chapter 1. Those same addresses are also noted in these labs for your reference.
+
+
+Lab 1
+
+The remaining labs in this chapter can be found in a file named Chapter3a-labs.txt, on the gamma.example.net system. You need to use your understanding of installed Linux documentation, or perhaps some basic search commands, to find that file.

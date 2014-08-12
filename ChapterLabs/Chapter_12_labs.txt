@@ -1,0 +1,60 @@
+﻿LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 12. 
+
+
+Lab 1
+
+In this lab, you create a script that backs up all files from the /home/testuser directory to a newly created /backup directory on an hourly basis at 45 minutes past the hour.
+
+Once the script is configured, you may not have an hour to wait. In that case, run an appropriate date command to move the local clock ahead to a minute before the script is scheduled to be run. For example, if the script is set to run next at 11:45 a.m., and it's July 11, the following command sets the current time to 11:44 a.m. on that date:
+
+$ date 07111144
+
+
+Lab 2
+
+In this lab, allow responses to ping command-based broadcasts on IPv4 networks, using kernel settings. 
+
+
+Lab 3
+
+Make a copy of the Chapter_12_labs.txt file from the /home/testuser/Desktop/ChapterLabs directory, on the gamma.example.net system. Set it up as an RPM package to be installed in the /opt/ChapterLabs directory. Don't tie the RPM to any specific architecture. To confirm, test the result by copying and installing the RPM on the whitehat.example.net system.
+
+
+Lab 4
+
+The first part of this lab is for setup purposes only, as the following steps configure an iSCSI storage. If you've already taken the steps noted in the body of the chapter, you may skip these steps. (I've modified the steps a little, if you want to practice with a slightly different iSCSI disk.)
+
+1. Install the iscsi-initiator-utils and scsi-target-utils packages.
+
+2. Start the tgtd service with the /etc/init.d/tgtd start command.
+
+3. Create a /var/lib/tgtd/iscsi directory.
+
+4. Create a 50MB image file with the dd if=/dev/zero of=/var/lib/tgtd/iscsi/test.img bs=1M count=50 command.
+
+5. Set appropriate SELinux contexts with the restorecon -R /var/lib/tgtd command.
+
+6. Add the following stanza to the /etc/tgt/targets.conf file; modify as needed for the date and system hostname. 
+
+<target iqn.2012-05a.net.example.gamma>
+backing-store /var/lib/tgtd/iscsi/test.img 
+write-cache off
+</target>
+
+7. Restart the tgtd service with the /etc/init.d/tgtd restart command. You may want to rescan locally with the iscsiadm -m discoverydb -t st -p gamma.example.net -D command, and then possibly run the /etc/init.d/iscsi restart command.
+
+8. Confirm the iSCSI target with the /etc/init.d/iscsi status command.
+
+9. Now take the steps required to mount the iSCSI target from a remote system such as whitehat (which is short for the whitehat.example.net system).
+
+
+Lab 5
+
+In this lab, you take the whitehat.example.net system and set it up as a Kerberos client. Assume the LDAP server is on system 192.168.122.1; the KDC is located on system kauai.example.net; and the Kerberos admin server can be found on that same system. Since Kerberos will be used, TLS is not required for LDAP.
+
+
+Lab 6
+
+On the gamma.example.net system, set up a custom route to the 192.168.100.0/24 network, using device eth0 on gateway 192.168.122.1. As with all other labs, make sure the route works after a reboot.

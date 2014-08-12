@@ -1,0 +1,54 @@
+﻿LABS
+
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 7.
+
+
+Lab 1
+
+Before you start this lab, back up the /boot directory. If something goes really wrong with this lab, you'll be able to at least recover the boot files in rescue mode. My suggestion: back it up with the following command. When you leave out the trailing forward slash from the /boot, the entire directory structure is copied to the /root/boot directory.
+
+# cp -ar /boot /root/
+
+Now update your kernel. Some kernels are included in the /home/testuser/Desktop/ChapterLabs/ subdirectory on the gamma.example.net system for that purpose. If you use the rpm command and get a message that a kernel is an older version, use the --force switch. In some (not all) configurations, you'll also need to install the kernel-firmware package as a dependency.
+
+Reboot your system. Verify the version of the running kernel.
+
+
+Lab 2
+
+Install all of the packages associated with the Backup Server package group.
+
+
+Lab 3
+
+In preparation for this lab, create a default installation FTP server that will serve as an update server. These steps are repeated from the Study Guide, Chapter 1, Lab 2, and assume you have an RHEL 6 installation DVD or ISO file(s) available. As there's not a great deal of free space on the gamma.example.net system, it may be best to set this up on the physical host.
+
+1. Create a directory for your installation files. With the following command, create the /var/ftp/pub/os directory. (If you get an error message, vsFTP may not be properly installed.)
+
+# mkdir /var/ftp/pub/os
+
+2. Insert the RHEL 6 installation DVD into its drive. If not automatically mounted, mount it with a command such as mount /dev/cdrom /media. (If all you have are the ISO files, say in the Downloads/ subdirectory, substitute mount -ro loop Downloads/rhel*.iso /media.)
+
+3. Copy the required files from the installation DVD. Use the cp -ar /source/. /var/ftp/pub/os command, where source is the mount directory (such as /media/). Don’t forget the dot (.); it makes sure to copy copies hidden files, including the .discinfo file. 
+
+4. Some rebuild distributions include a second DVD with additional packages. Copy those files as well.
+
+5. Make sure there’s nothing blocking access to your vsFTP server. Use a tool like the Firewall Configuration tool to open up port 21 on the local system. For more information on firewalls and SELinux, see Chapter 4 of the Study Guide.
+
+6. If SELinux is enabled on the local system, run the following command to apply appropriate SELinux contexts to the files on the new directory:
+
+# chcon -R -t public_content_t /var/ftp/
+
+7. Now activate the FTP server with the following command:
+
+# service vsftpd restart
+
+8. Test the result. On a remote system, you should be able to use the lftp command to connect to the local FTP server, using its IP address. Once connected, you’ll be able to find the installation files in the pub/os/ subdirectory.
+
+Now it's time for the actual lab itself. Create a repository configuration file on the gamma.example.net system to point to this installation server.
+
+
+Lab 4
+
+List the package groups that are currently installed on the local system. Save the result to the packagegroups.txt file on the testuser home directory.

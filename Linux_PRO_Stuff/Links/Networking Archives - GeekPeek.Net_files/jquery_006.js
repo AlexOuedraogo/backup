@@ -1,0 +1,1 @@
+jQuery(window).load(function(){"use strict";jQuery('.mainflex,.galleryslider,.singleslider').flexslider({animation:"fade",slideshow:true,slideshowSpeed:7000,animationDuration:900});jQuery('.widgetflexslider').flexslider({animation:"slide",slideshow:false,animationLoop:true,itemWidth:238,itemMargin:0});});

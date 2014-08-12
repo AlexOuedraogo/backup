@@ -1,0 +1,37 @@
+﻿LABS
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 13. 
+
+
+Lab 1
+
+Configure Postfix to forward e-mail from both the testuser and root users to genius@example.net. Repeat the process for sendmail.
+
+
+Lab 2
+
+Configure Postfix to accept traffic from other systems on the example.net network, except blackhat.example.net.
+
+
+Lab 3
+
+Configure Postfix as a smart host, set to forward e-mails to a server on the physical host system (kauai.example.net).
+
+
+Lab 4
+
+Configure Postfix to reject e-mails from all users named blackhat.
+
+
+Lab 5
+
+Set up the sendmail service. Make sure the Postfix service is no longer operational, but keep it ready for use. Make sure sendmail listens to more than just the localhost system on port 587.
+
+
+Lab 6
+
+For the sendmail service, limit access to systems on the 192.168.122.0/24 network. Prohibit access from the system on IP address 192.168.122.240.
+
+
+Lab 7
+
+Configure the sendmail service on gamma.example.net as a sendmail smart host, forwarding to the physical host system on kauai.example.net.

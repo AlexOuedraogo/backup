@@ -1,0 +1,63 @@
+﻿
+LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 2.
+
+Be aware, Labs 2, 3, 4, and 5 may require lots of free space on the local system. If you've followed the guidelines in Chapter 1, Figure 1-1, you should have at least approximately 40GB of free space available. But some of these labs require the creation of additional VMs of 12GB each. 
+
+If you have limited space, feel free to read each answer in the book after completing the lab. Do follow the suggestions to delete the subject VMs to preserve free space on your system.
+
+
+Lab 1
+
+This lab should be fairly simple. Configure the three VMs to start automatically the next time you boot your physical host system.
+
+Once you've rebooted your physical host, verify the result. Delete all files in the /etc/libvirt/qemu/autostart directory. Reboot the physical host again. What happens? Do you need to do anything else to make sure the VMs don't start automatically the next time you boot?
+
+Because this lab requires that you reboot the physical host, please feel free to make notes about this lab.
+
+
+Lab 2
+
+While KVM is an important part of the RHCSA objectives, clones are not explicitly listed in those objectives. 
+
+Clone the blackhat.example.net system at the GUI Virtual Machine Manager. Let the clone run at the same time as the original. Check the IP address and hardware address of the network card on each system. Identify the location of the cloned hard-drive file.
+
+Delete the clone and associated hard-disk file when you're done.
+
+Repeat the process with the virt-clone command.
+
+
+Lab 3
+
+Create a new system from the command-line interface. Use the virt-install command for that purpose. Use an ISO file from a DVD as the installation source. If you're already experienced at installing RHEL 6, it's okay to stop at the installation screen shown back in Chapter 1, Figure 1-3. Just be sure to delete any disk files created.
+
+Repeat the process from the GUI Virtual Machine Manager.
+
+
+Lab 4
+
+Take the Kickstart file from the blackhat.example.net system. Modify the IP address and host name on that system. Make sure to activate the associated storage volume directives. Use it and the default configuration FTP server to set up a new KVM-based VM. If you've saved the configuration server created in Chapter 1, Lab 4, you can use that server for this purpose. 
+
+As with Lab 2, activate both systems. Check the IP address and host name of each system. When you're done, delete the system created with the Kickstart file.
+
+
+Lab 5
+
+Repeat Lab 4, with one change. Set up the installation with the /var directory configured on its own partition. 
+
+If needed, you may use the local FTP server for the Kickstart configuration file. Hint: don't forget to revise the appropriate Kickstart configuration file to make sure the installation is run from the DVD. When you're done, as with Lab 4, delete the system created with the Kickstart file.
+
+
+Lab 6
+
+Use the Secure Shell to connect to the whitehat.example.net system. Once connected to that system, use the Secure Shell to connect to both the blackhat.example.net system, as well as the original gamma.example.net VM. Exit from the Secure Shell and return to the gamma.example.net system. 
+
+Now access the whitehat.example.net system in a way that supports access to the console-based firewall configuration tool. Repeat the process for the GUI configuration tool. Install the applicable package, if necessary. 
+
+
+Lab 7
+
+This lab goes somewhat beyond the direct scope of the Red Hat exams. However, it includes tools that can help you diagnose issues related to services on both the RHCSA and RHCE exams.
+
+Try the nmap command. Apply it to all systems on your test network--that includes the physical host, as well as all three VMs. Try it from both inside a system with a command like nmap localhost, and from outside the system, as applied to the appropriate IP address. Do you see a difference in output?

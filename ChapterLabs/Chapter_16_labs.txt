@@ -1,0 +1,52 @@
+﻿LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 16.
+ 
+You may note that several of the labs are similar to those in the Study Guide. Rest assured that  although you may take the same basic actions in some of these labs, the parameters that you use will vary. And practice makes perfect.
+
+
+Lab 1
+
+In this lab, you review the effect of permissions and examine the effect of the hide option in an NFS share. First, review the permissions on the /home/testuser directory. The output of the ls -l /home command should read something like the following:
+
+drwx------.   23 testuser testuser    4096 June 1 18:33 testuser
+
+Now take the following actions. You may have to fill in some details from your knowledge of Linux.
+
+1. Set up a read-only share of the /home directory on the gamma.example.net system.
+
+2. Try mounting the /home directory share as the root user. What happens when you try reading the testuser subdirectory?
+
+3. Run the su - testuser command, and try reading the testuser subdirectory again. Move back to the root account with the exit command.
+
+4. Unmount the share, and reshare the /home directory share with the no_root_squash option. What happens when you repeat step 2?
+
+5. Unmount the share, and reshare the /home directory with the hide option. Repeat step 2 once again.
+
+6. For a third time, unmount the share. Set executable permissions for other users on the /home/testuser directory. Repeat step 2. Do one more thing--try reading the contents of the testuser/Desktop subdirectory. What happens?
+
+
+Lab 2
+
+Make the necessary changes to prevent another administrator, or potentially a black-hat hacker, from sharing NFS home directories. Sharing other directories over NFS in read-only or read-write modes is acceptable. For the purpose of this lab, you can assume that SELinux is set in enforcing mode.
+
+
+Lab 3
+
+Limit the NFS share created in Lab 1 to the whitehat.example.net system. Make sure the NFS share that's created is not accessible from the blackhat.example.net system.
+
+
+Lab 4
+
+When an anonymous-only user logs into the standard RHEL 6 FTP server, that user might find it annoying to have to move to the pub/ subdirectory before downloading anything. Change the configuration so  anonymous-only users see the /var/ftp/pub directory as their top-level directory once connected.
+
+If you're using this FTP server for any other purpose, you may want to restore the original configuration after the lab is complete, and you've checked the result.
+
+
+Lab 5
+Make sure to allow anonymous-only access to the FTP server. Don’t allow anonymous users to upload to that server. Even though it's not the best security practice, disable logging of transfers. 
+
+
+Lab 6
+
+Enable access by regular users. Disable access from the user named testuser. You may want to create a new regular user on the system with the FTP server to check the result.

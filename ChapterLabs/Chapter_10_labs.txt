@@ -1,0 +1,38 @@
+﻿LABS
+
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 10.
+ 
+
+Lab 1
+
+On the physical host system, configure the firewall to accept all network packets from the VMs configured for this book.
+
+
+Lab 2
+
+On the gamma.example.net system, block just the ping command. Allow all other ICMP-related network packets into the system.
+
+
+Lab 3
+
+On the physical host system, configure port forwarding from the normal SSH port to TCP port 13579. Apply forwarding to the appropriate virtual network device. If you want to test the result, edit the sshd_config file from the /etc/ssh directory, and add the following entry:
+
+Port 13579 
+
+Then reload the configuration file into the SSH service with the /etc/init.d/sshd reload command. You can then use the ssh command from the gamma.example.net system to log into the physical host.
+
+
+Lab 4
+
+On the gamma.example.net system, modify appropriate TCP Wrappers files to prohibit access from just the blackhat.example.net system on IP address 192.168.122.240 to the SSH server, from just the blackhat.example.net system on IP address 192.168.122.240. (Of course, you can also perform this action with appropriate iptables-rules; however, this lab is intended to help you test your skills with TCP Wrappers.)
+
+
+Lab 5
+
+Take the list of users configured in /etc/vsftpd/ftpusers. Install the vsFTP server, if necessary, to reveal that list. Use that list, and make sure those same users are not allowed to log into the SSH server on the gamma.example.net system. 
+
+
+Lab 6
+
+Limit access to the vsFTP server installed in Lab 5 to systems on the 192.168.122.0 network. Prohibit access from the blackhat.example.net system on IP address 192.168.122.240.

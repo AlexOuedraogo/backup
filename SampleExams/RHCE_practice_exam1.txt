@@ -1,0 +1,43 @@
+﻿RHCE: Sample Exam 1
+
+Start with the preconfigured RHEL 6 systems described in Appendix A. Power up the gamma.example.net, whitehat.example.net, and blackhat.example.net systems. Once they start, log into the gamma.example.net system. References in the exam use just the hostname (gamma, whitehat, and blackhat). The testuser account on these systems is associated with the following password:
+
+rhcert
+
+Now you have 2 hours (120 minutes) to solve the following problems:
+
+1. Make sure SELinux is set in enforcing mode. Do not disable the iptables-based firewall on the local system.
+
+2. Set up whitehat as a logging client that sends all data to gamma. Make sure that gamma is configured to receive such data.
+
+3. Create a static route from gamma to systems on the 10.20.30.0/24 network, that goes through IP address 192.168.122.1. Use the default eth0 network adapter.
+
+4. Configure two regular virtual hosts on an Apache server. Give them URLs of oahu.example.net and maui.example.net. Make them accessible from the whitehat and blackhat systems. Set them up in directories /www/oahu and /www/maui. Include text-based welcome pages with the following entries, so clients know that they've accessed the correct website:
+
+Welcome to Oahu!
+
+Welcome to Maui!
+
+5. For the Apache server virtual hosts, set up cgi-bin/ subdirectories for each site. Include the terms shown above in a script, accessible from the following URLs:
+
+http://oahu.example.net/cgi-bin/oahu.pl 
+
+http://maui.example.net/cgi-bin/maui.pl 
+
+6. Set up an FTP server that supports anonymous-only downloads from the /pub/ftp directory. Copy the contents of the /usr/share/doc/book-1.0.0 directory to /pub/ftp for that purpose. 
+
+7. Configure a Samba server directory named /home/masters, with access limited to users named linus and andrew. Do not allow access from the blackhat system.
+
+8. Support access to user home directories via Samba, but limit that access to the user named testuser. 
+
+9. Do not allow SSH access to the root user from any system. Furthermore, limit access to the user named testuser.
+
+10. Configure an SMTP server with access limited to the local 192.168.122.0/24 network.
+
+11. Set up an NTP server on gamma that supports access from other systems on the 192.168.122.0/24 network.
+
+12. Revise the cron job associated with the database associated with the locate command. Make sure it's run twice every day at 5:02 a.m. and 7:03 p.m.
+
+13. Configure a caching-only nameserver limited to the local system. Configure the local system to use that DNS server.
+
+14. Power down the exam system.

@@ -1,0 +1,43 @@
+﻿RHCE: Sample Exam 2
+
+Start with the preconfigured RHEL 6 systems described in Appendix A. Power up the gamma.example.net, whitehat.example.net, and blackhat.example.net systems. Once they start, log into the gamma.example.net system. References in the exam use just the hostname (gamma, whitehat, and blackhat). The testuser account on these systems is associated with the following password:
+
+rhcert
+
+Now you have 2 hours (120 minutes) to solve the following problems:
+
+1. Disable all responses from the gamma system to ping broadcasts.
+
+2. Create an RPM from the RHCE_practice_exam1.txt file in the /home/testuser/Desktop/SampleExams subdirectory. Set up the RPM with a package name of RHCEexam1. Set it as version 1.0. When the RPM is installed, it should write the exam file to the /opt/rhce directory.
+
+3. Take the system activity report from the fifth of the month, and extract network statistics. Copy the results to the stat_net_05 file in testuser's home directory.
+
+4. Set up a shared subdirectory named /home/steelers on a default Apache web server, accessible to users terry and heinz.
+
+5. Configure a caching-only name server, accessible to all systems on the example.net network. Configure the gamma and whitehat clients to use that nameserver.
+
+6. Share the /home directory from the gamma system via NFS. Configure access as read-only. Do not allow direct root access over the network to the shared directory.
+
+7. Share the /download directory over Samba. Make that directory accessible to all users in read-only format.
+
+8. Set up an SMTP host to relay messages to a smart host on IP address 192.168.0.1.
+
+9. Configure an SSH passphrase for user testuser for connections from whitehat to gamma. That passphrase should be:
+
+I will succeed!
+
+10. Set up two secure web sites, named midway.example.net and wake.example.net. Set them up on the /wwws/midway and /wwws/wake directories. Create the following messages to greet users who make it to the secure web sites:
+
+You've reached Midway!
+
+You've made it to Wake!
+
+Warning: It's possible that a secure web site as configured will only work with a graphical web browser. Firefox is available on both gamma and whitehat for this purpose.
+
+Bonus: Create a secure certificate for each site.
+
+11. Configure an NTP server on whitehat and gamma. The NTP server on gamma will be a regular server; the NTP server on whitehat will be configured to see gamma as a peer.
+
+12. Configure all network services covered in this sample exam to be accessible from only the whitehat system. Yes, SELinux should be set in enforcing mode too.
+
+13. Power down the exam system.

@@ -1,0 +1,76 @@
+﻿LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 4. The labs in this chapter are to be run on the gamma.example.net system, unless otherwise noted.
+
+You should run Labs 2 and 3 consecutively. You should also run Labs 5, 6, and 7 consecutively. Lab 8 assumes that you have installed a default configuration FTP server. If you've run Chapter 1, Lab 4, you should already have one in place on the gamma.example.net system.
+
+To run these labs, you'll need a second regular user. These labs assume that user is named testuser2. Either use the techniques described in Chapter 8, or take the following steps to create that user:
+
+1. Log in as the root administrative user.
+
+2. Run the following command to create the testuser2 account:
+
+# useradd testuser2
+
+3. Run the following command to give a password to that user with the passwd testuser2 command. Set that password to:
+
+rhprof
+
+4. When you're prompted to confirm that password, you'll be told that password is based on a dictionary word and is too simple. That is acceptable. Type in the password noted above in Step 3 again.
+
+5. When you see the following message, you're ready to run the labs in this chapter. (You may also want to verify the existence of the /home/testuser2 directory.)
+
+passwd: all authentication tokens updated successfully.
+
+
+Lab 1
+
+In this lab, create a file named test1 in the /shared directory, which is readable by all users, but is writable only by the user named testuser.
+
+
+Lab 2
+
+In this lab, configure the /home directory on the gamma.example.net system to use ACL permissions.
+
+Hint: make sure whatever you configure mounts the /home directory with the ACL setting the next time the system is booted.
+
+
+Lab 3
+
+Now configure the files in the /home/testuser/Desktop/ChapterLabs directory to be read-only accessible read-only to testuser2 on the gamma.example.net system and only to that user. If desired, you may want to create testuser3, using the techniques described at the beginning of this lab section. That third test user can help you verify the security of the files in the /home/testuser/ChapterLabs directory.
+
+
+Lab 4
+
+Time to configure a firewall. This (and subsequent) labs assume that you've run the labs described in Chapter 3 to set up static IP addresses for the VMs, per Chapter 1, Table 1-2. (For those of who you who don't want to turn the back several pages, the IP addresses are 192.168.122.20, 192.168.122.130, and 192.168.122.240 for systems gamma.example.net, whitehat.example.net, and blackhat.example.net, respectively.) 
+
+If you haven't already done so, install the nmap utility with the yum install nmap command on both the gamma.example.net and the whitehat.example.net systems. On the gamma.example.net system, run the nmap localhost command. On the whitehat.example.net system, run the nmap 192.168.122.20 command. Note the differences?
+
+Change the firewall on the gamma.example.net system so the output for the nmap commands are the same. Restore the original firewall.
+
+
+Lab 5
+
+If you've executed the labs in the Study Guide, this lab may seem familiar. There are only so many ways to set enforcing and permissive modes for SELinux. Run the sestatus command. Change the current mode with the setenforce command. Run the sestatus command again. Were you successful? Make sure SELinux is set in enforcing mode when this lab is complete.
+
+
+Lab 6
+
+Create a /srv/www directory. Populate it with some random files. (You could use the touch a b c command for that purpose.) Make sure the files in this directory are configured with appropriate SELinux options for an FTP server. (That is not a misprint.) If you haven't already done so, install an Apache server with the yum install httpd command.
+
+
+Lab 7
+
+For the /srv/www directory, restore the default SELinux contexts for the files.
+
+ 
+Lab 8
+
+In this lab, use SELinux to set up remote access for the user named testuser via the FTP server configured on the gamma.example.net system.
+
+
+Lab 9
+
+Use the testaudit.log file from the ChapterLabs folder on the gamma.example.net system. Identify different SELinux issues, and what you might do to address those issues.
+
+Don't run any of the suggested commands on your system. The testaudit.log file was created specifically to help you understand how to address and diagnose a SELinux policy violation.

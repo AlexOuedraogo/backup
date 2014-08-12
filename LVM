@@ -1,0 +1,13 @@
+Mount lvm on different server
+# Install lvm2 if not already installed.
+    yum -y install lvm2
+#    Import volumes (for use in new system) -f switch for force import (for lvm that was not exported)
+    vgimport -f volume_group_name
+#    Activate volumes on that group
+    vgchange -ay volume_group_name
+#    Run lvscan if you don't know name of your logical volume
+#    Mount it like this:
+
+    mount /dev/mapper/lvm2_volume_name /where/to/mount
+
+

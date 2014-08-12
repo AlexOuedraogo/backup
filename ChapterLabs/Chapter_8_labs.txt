@@ -1,0 +1,36 @@
+﻿LABS
+
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 8. As other labs depend on the three users created in Lab 1, run that lab before the others. Labs 5 and 6 should also be run in sequence.
+
+
+Lab 1
+
+Set up users temp1, temp2, and temp3. Give them a password that is the same as their usernames. (Yes, this is an insecure practice.) Make sure these users (and all users who are created afterward) get a copy of the ChapterLabs/ subdirectory in their home directories. Configure their accounts to expire in three months.
+
+
+Lab 2
+
+Make sure future users are required to keep a password for at least 2 days, but no longer than 14 days. Create a different password requirement for users temp1, temp2, and temp3; although they need to keep a password for at least 2 days, make them change the password every 7 days. 
+
+
+Lab 3
+
+Configure the user named testuser with full sudo-based administrative privileges. Configure user temp1 with limited sudo-based administrative privileges, associated with shutting down the system. While limited, allow temp1 that privilege from remote systems.
+
+
+Lab 4
+
+Set up a group named temps. Give it a group ID number of 123456. Make users temp1, temp2, and temp3 part of that group. Make sure they retain their respective user private groups. 
+
+
+Lab 5
+
+Configure the group named temps with their own directory, /home/temps. Configure it to support sharing among these temporary users: temp1, temp2, and temp3. 
+
+
+Lab 6
+
+Configure the gamma.example.net system on the example.net domain. Point it to an LDAP server on IP address 192.168.122.1; do not use TLS for the connection.
+
+Unless you have an LDAP server configured for the local network, reverse this process to disable the LDAP client when reading over the answer to this lab.

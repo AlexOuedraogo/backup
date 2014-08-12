@@ -1,0 +1,41 @@
+﻿RHCSA: Sample Exam 2
+
+Start with the preconfigured RHEL 6 systems described in Appendix A. Power up the gamma.example.net and whitehat.example.net systems. Once they start, log into the gamma.example.net system. References in the exam use just the hostname (gamma and whitehat). The testuser account on these systems is associated with the following password:
+
+rhcert
+
+Now you have 2.5 hours (150 minutes) to solve the following problems:
+
+1. Set SELinux in permissive mode. If there are SELinux issues, they won't secure certain services. Nevertheless, you're still responsible for making sure all SELinux issues are resolved.
+
+2. Configure a second partition of 500MB in the remaining empty space of the second drive of gamma. Format it and encrypt it to the ext3 file system. Set it up in a new directory named /encrypt. Include the following passphrase:
+
+I will pass!
+
+Make sure that partition is configured to be mounted during the boot process. 
+
+3. Set up VNC access from the physical host to the testuser account on the gamma.example.net system. Configure mcgraw as the password for VNC access.
+
+4. Configure the whitehat system to boot automatically into runlevel 3. 
+
+5. Install the Apache web server. Make sure it's set to start only in runlevel 3. Configure an index.html file in the /var/www/html directory with the words "I will pass this exam". Text format is acceptable for this purpose.
+
+6. Give user testuser read and write access to that index.html file. Other users will have read-only access to that file.
+
+7. Configure a first partition on the second drive of gamma. Make it 300MB. If necessary, delete any existing partition in that space. Set up a logical volume of 200MB in that space, mounted on the /vol directory that you may need to create. Partition and volume sizes don't have to be exact. Make sure it's set up to mount during the boot process. 
+
+8. Create a /srv/ftp directory. Restore the default SELinux file contexts on that directory.
+
+9. Use the contents of the ChapterLabs/ subdirectory from the /home/testuser/Desktop directory. For all future new users, make sure they get the ChapterLabs/ subdirectory in their home directories.
+
+10. On the blackhat system, make sure the hardware address of the network card is set to 52:54:00:9e:e2:28. Confirm this leads to the network card having a static IP address of 192.168.122.240. Make sure the network card on all three systems is set to activate during the boot process.
+
+11. Install the latest available kernel. If one is not available, you may use a kernel in the /home/testuser/Desktop/ChapterLabs directory. Make sure the original kernel on the gamma system, version 2.6.32-220.el6.x86_64, is set as the default.
+
+12. Make sure the services installed during this exam are accessible from remote systems. Do not disable the firewall.
+
+13. Configure a job to copy the /var/log/messages file to the /home/testuser directory every evening at 11:08 p.m. 
+
+14. Set up the whitehat.example.net system as an LDAP client. Use the example.net domain, assume the LDAP server is gamma.example.net, and do not use TLS for the connection.
+
+15. Power down the exam system.

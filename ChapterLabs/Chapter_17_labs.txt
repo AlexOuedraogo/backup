@@ -1,0 +1,37 @@
+﻿LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 17.
+
+You may note that several of the labs are similar to those in the Study Guide. Rest assured that although you may take the same basic actions in some of these labs, the parameters that you use will vary. And practice makes perfect. As with chapters from other labs, this assumes the use of the static IP addresses associated with the example.net systems as documented in Chapter 1.
+
+
+Lab 1
+
+In this lab, set up a system utilization report, written to a cpu_report.txt file, in the /root directory. Report parameters can be limited to CPU usage, but should display all available information.
+
+
+Lab 2
+
+Given the activity from a second shift at your company, the computers get a workout too. System utilization of those systems continues through 1 a.m. Reconfigure the system status service so the daily summary of system utilization is run at 2:12 a.m.
+
+
+Lab 3
+
+This is effectively a two-part lab, as it’s combined with Lab 4. In this lab, you set up the gamma.example.net system as a logging server, ready to receive data from only the whitehat.example.net system (which should be on IP address 192.168.122.130), using the UDP protocol.
+
+
+Lab 4
+
+This is effectively a two-part lab, as it’s combined with Lab 3. In this lab, you set up the whitehat.example.net system to send all logging data of info level or higher to the gamma.example.net system on IP address 192.168.122.20 as configured in Lab 3.
+
+
+Lab 5
+
+In this lab, set up a caching DNS nameserver on the gamma.example.net system that also serves the whitehat.example.net system and nothing else. Focus on IPv4 addressing. Don't be concerned about IPv6 networking for this lab.
+
+
+Lab 6
+
+Set up the whitehat.example.net system with the ntpdate service. Disable its NTP server. Make it synchronize from a running NTP server on the gamma.example.net system. 
+
+On the gamma.example.net system, configure a running NTP server. For the purpose of this lab, it's acceptable to have the NTP server synchronize with servers on outside networks.

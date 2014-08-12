@@ -1,0 +1,37 @@
+﻿RHCSA: Sample Exam 1
+
+Start with the preconfigured RHEL 6 systems described in Appendix A. Power up the gamma.example.net and whitehat.example.net systems. Once they start, log into the gamma.example.net system. References in the exam use just the hostname (gamma and whitehat). The testuser account on these systems is associated with the following password:
+
+rhcert
+
+Now you have 2.5 hours (150 minutes) to solve the following problems:
+
+1. Make sure SELinux is set in enforcing mode. 
+
+2. Find the gamma.hardware file, and change the hardware address of the network card to match the one found in that file. 
+
+3. Create an FTP server on the gamma system.
+
+4. Create a working Kickstart file based on one already available on gamma, and copy it to the FTP server in the /var/ftp/pub directory. Installation must be able continue to completion based on the changes you make to that file. 
+
+5. Test the FTP server from whitehat. You may install the lftp RPM for this purpose. If successful, you'll see the Kickstart file in that directory.
+
+6. Configure the gamma virtual machine to start automatically the next time the local physical host system is booted. 
+
+7. For the whitehat system, change the hardware address of the network adapter to 52:54:00:ec:81:11.
+
+8. Create a second bootloader option on gamma, labeled with the words "Single User Mode." Use the same kernels as the default RHEL 6 bootloader option. Set it to start in runlevel 1. Password protect the option, and set redhat as the password.
+
+9. Configure a partition of 500MB in the empty space of the second drive of gamma, and set it up as additional swap space.
+
+10. Create a new user named testuser2. Make sure the password on that account expires after 21 days, with and an account expiration date of March 15, 2017.
+
+11. Provide access to only user testuser2 to the /home/testuser/Desktop/ChapterLabs directory. 
+
+12. Set up a job to delete all of the regular files in the /encrypt directory every Sunday at 1:00 a.m.
+
+13. Create a specialized group named supervisors. Create users super1, super2, and super3. Make those users members of that group. Set up a common /home/super directory accessible to only these three users. 
+
+14. Install the amanda RPM.
+
+15. Power down the exam system.

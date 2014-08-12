@@ -1,0 +1,29 @@
+To remove apache test page in CentOS, follow the steps below:-
+Start your Terminal and login to your webserver thru SSH Once logged in, edit this file with your favorite editor
+/etc/httpd/conf.d/welcome.conf
+    	
+The content of the file should look similar like this:
+
+# This configuration file enables the default "Welcome"
+# page if there is no default index page present for
+# the root URL.  To disable the Welcome page, comment
+# out all the lines below.
+#
+&lt;LocationMatch "^/+$"&gt;
+   Options -Indexes
+   ErrorDocument 403 /error/noindex.html
+&lt;/LocationMatch&gt;
+
+To remove the apache test page, comments all the line like below:-
+# This configuration file enables the default "Welcome"
+# page if there is no default index page present for
+# the root URL.  To disable the Welcome page, comment
+# out all the lines below.
+#
+#&lt;LocationMatch "^/+$"&gt;
+#    Options -Indexes
+#    ErrorDocument 403 /error/noindex.html
+#&lt;/LocationMatch&gt;
+
+now reload your apache web server
+service httpd reload

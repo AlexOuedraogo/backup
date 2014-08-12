@@ -1,0 +1,345 @@
+CentOS 5.10 Netinstall – Network Installation
+
+CentOS 6 is released, check CentOS 6.3 Netinstall guide (http://www.if-not-true-then-false.com/2011/centos-6-netinstall-network-installation/).
+
+Install CentOS 5.10 with NetInstall method
+1. Download CentOS 5.10 Net Install (NetInstall) Image
+
+Select mirror here:
+i386 version
+x86_64 version
+
+Select ISO image
+CentOS-5.10-i386-netinstall.iso
+CentOS-5.10-x86_64-netinstall.iso
+
+2. Burn Image to CD and Boot Computer Using CentOS 5.10 Installation CD
+
+Check CentOS image MD5 sum and burn image to CD with your favourite CD burner. And boot computer using CentOS Installation CD.
+3. Select Network Installation (NetInstall) on LiveCD Grub Menu or just press enter on CentOS Netinstall CD
+
+4. Booting CentOS 5.10 Installer
+5. Choose a Language
+6. Select keyboard type
+7. Select Network Installation Method
+
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuratio
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type
+
+Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+8. Configure TCP/IP settings
+9. Setup CentOS 5.10 Netinstall URL (Installation Web site name and CentOS directory)
+
+Web site name:
+mirror.centos.org
+
+CentOS directory for i386:
+/centos/5/os/i386
+or
+/centos/5.10/os/i386
+
+CentOS directory for x86_64:
+/centos/5/os/x86_64
+or
+/centos/5.10/os/x86_64
+10. Downloading Installer
+11. Welcome to CentOS Screen
+12. Select Partitioning Type Select “Create custom layout” option if you want modify partitions.
+13. Boot Loader Configuration
+14. Network configuration
+15. Select Time Zone
+16. Set Root Password
+17. Select packages for Installation
+18. Installing Selected Packages
+19. Installation Completed, Reboot
+20. Booted on Just Installed CentOS 5.9 Linux Server Command Line

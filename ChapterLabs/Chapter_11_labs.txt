@@ -1,0 +1,43 @@
+﻿LABS
+
+During the Red Hat exams, the tasks are presented electronically. Therefore, this book presents most of the labs electronically as well. For more information, see the Lab Questions section toward the end of Chapter 11.
+
+
+Lab 1
+
+The intent of this lab is to practice the installation and removal of different package groups. It's a "skill-building" exercise of sorts, designed to increase your confidence in different installation tools. If you're already a master of the yum command, this lab may be a bit too elementary for you.
+
+1. Identify the currently installed and available package groups. Copy the output to the /root/groupstatus file.
+
+2. Find more information about the "CIFS file server" package group. Copy the output to the /root/CIFSgroupinfo file.
+
+3. Install all packages cited in the "CIFS file server" package group. Copy the messages to the /root/CIFSinstall file.
+
+4. Remove all packages from the "CIFS file server" package group. Copy the messages to the /root/CIFSremove file.
+
+
+Lab 2
+
+In this lab, disable every service in runlevel 4. As that runlevel is not used for anything significant in RHEL 6, disabling these services in runlevel 4 (and only runlevel 4) should not cause any harm.
+
+
+Lab 3
+
+In this lab, create an /ftp and an /ftp/pub directory. Give it the same SELinux contexts as the default directories associated with the vsFTP server. Make sure that information is reflected in the default contexts for the system.
+
+
+Lab 4
+
+In this lab, set up the following passphrase to enable logins from the whitehat.example.net system to gamma.example.net.  Use the testuser account on both systems.
+
+I will pass the RHCE exam!
+
+
+Lab 5
+
+Prohibit remote root access to the SSH server. Allow access for user testuser from only the whitehat.example.net system.
+
+
+Lab 6
+
+Disable SSH-based GUI access.
