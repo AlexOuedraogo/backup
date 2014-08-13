@@ -1,0 +1,6 @@
+What is  YAML
+
+YAML, or Yet Ain’t Markup Language (http://www.yaml.org/), is a serialization language used in a variety of programming languages. YAML is human-friendly,
+meaning that it’s structured and is designed to be easy to read. It is often used as a configuration file format; for
+example, the database configuration file used in Ruby on Rails applications, database.yml, is a YAML file.
+
